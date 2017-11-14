@@ -14,6 +14,7 @@ class AVLTree:
     def height(self):
         return self.rec_height(self.root)
 
+
     def rec_height(self,root):
         if root == None:
             return 0
@@ -24,7 +25,6 @@ class AVLTree:
                 return 1+leftH
             else:
                 return 1+rightH
-
 
     def single_left_rotate(self,root):
         W = root.left

@@ -18,7 +18,7 @@ class DinamicArrayStack:
         self.length = 0
 
     def push(self, data):
-        if self.maxSize != None and self.length > self.maxSize:
+        if self.maxSize != None and self.length >= self.maxSize:
             raise Exception("Stack is full.")
         self.stack.append(data)
         self.length +=1

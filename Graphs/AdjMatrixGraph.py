@@ -21,7 +21,6 @@ class Vertex:
     def __str__(self):
         return str(self.id)
 
-
 class Graph:
     def __init__(self,numVertices,cost=0):
         self.adjMatrix=[[-1]*numVertices for _ in range(numVertices)]
@@ -64,7 +63,6 @@ class Graph:
                 edges.append((self.vertices[v].get_vertex_ID(),self.vertices[u].get_vertex_ID(),self.adjMatrix[v][u]))
         return edges
 
-
 g = Graph(5)
 g.set_vertices(0,"a")
 g.set_vertices(1,"b")
@@ -79,8 +77,3 @@ g.add_edge("e","d",50)
 g.add_edge("f","e",60)
 g.print_matrix()
 print g.get_edges()
-
-
-
-
-

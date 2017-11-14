@@ -2,15 +2,12 @@ from LinkedListStack import LinkedListStack
 
 def isPalindrome(string):
     stack = LinkedListStack()
-    palindrome = False
     for char in string:
         stack.push(char)
     for char in string:
-        if char == stack.pop():
-            palindrome= True
-        else:
+        if char != stack.pop():
             return False
-    return palindrome
+    return True
 
 
-print(isPalindrome("aamaa"))
+print(isPalindrome("aama"))

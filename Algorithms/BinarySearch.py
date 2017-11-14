@@ -11,8 +11,15 @@ def binarySearch(array,val):
     else:
         return False
 
-def pivot_binarySearch(array,val,high,low):
-    pass
+def pivot_binarySearch(array,val):
+    low = 0
+    high = len(array)-1
+    while low <= high:
+        mid = (low+high)//2
+        if array[mid] > val: high = mid-1
+        elif array[mid] < val: low = mid+1
+        else: return mid
+    return -1
 
 
 array = [1,2,3,4,5]

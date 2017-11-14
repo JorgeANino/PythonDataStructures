@@ -1,9 +1,9 @@
 def quickSort(array):
-    pivot = array[len(array)/2]
-    higher = []
-    equal = []
-    lower = []
     if len(array) > 1:
+        pivot = array[len(array) / 2]
+        higher = []
+        equal = []
+        lower = []
         for x in array:
             if x == pivot:
                 equal.append(x)
